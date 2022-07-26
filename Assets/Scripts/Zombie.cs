@@ -19,9 +19,14 @@ public class Zombie : MonoBehaviour
 
     void Update()
     {
+        { 
         float dist = Vector3.Distance(transform.position, player.transform.position);
         anim.SetFloat("distance", dist);
         if (dist < 2.5f) agent.speed = 0;
         else agent.SetDestination(player.transform.position);
+        }
     }
+   
+
+
 }
